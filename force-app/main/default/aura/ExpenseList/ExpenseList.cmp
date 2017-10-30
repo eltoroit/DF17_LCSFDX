@@ -1,0 +1,35 @@
+<aura:component >
+    <aura:attribute name="expenseSum" type="Double" default="0.00" />
+    <aura:attribute name="expenseCount" type="Integer" default="0" />
+    <aura:attribute name="approvedSum" type="Double" default="0.00" />
+    <aura:attribute name="approvedCount" type="Integer" default="0" />
+    
+    <!-- Expense Counters -->
+    <lightning:card title="Summary" iconName="custom:custom17">
+        <lightning:layout >
+            <lightning:layoutItem size="6" mediumDeviceSize="3" padding="around-small">
+                <p class="summaryHeader">Expenses</p>
+                <p class="summary">{!v.expenseCount} records</p>
+                <p class="summary">
+                    <lightning:formattedNumber value="{!v.expenseSum}" style="currency" 
+                                               currencyCode="USD" currencyDisplayAs="code"/>
+                </p>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6" mediumDeviceSize="3" padding="around-small">
+                <p class="summaryHeader">Approved</p>
+                <p class="summary">{!v.approvedCount} records</p>
+                <p class="summary">
+                    <lightning:formattedNumber value="{!v.approvedSum}" style="currency" 
+                                               currencyCode="USD" currencyDisplayAs="code"/>
+                </p>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+    
+    <!-- Display Expense Data -->
+    <lightning:layout multipleRows="true" horizontalAlign="center">
+        <lightning:layoutItem >
+            <b>Expense Data Will Display Here</b>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

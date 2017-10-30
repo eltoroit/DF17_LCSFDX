@@ -1,0 +1,100 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Expense__c",
+                "referenceId": "Expense__cRef1"
+            },
+            "Name": "Dinner",
+            "Amount__c": 100,
+            "Approved__c": false,
+            "Client__c": "Acme",
+            "Date__c": "2017-10-02T16:28:00.000+0000",
+            "Reimbursed__c": false
+        },
+        {
+            "attributes": {
+                "type": "Expense__c",
+                "referenceId": "Expense__cRef2"
+            },
+            "Name": "Lunch",
+            "Amount__c": 50,
+            "Approved__c": false,
+            "Client__c": "Acme",
+            "Date__c": "2017-10-03T16:28:00.000+0000",
+            "Reimbursed__c": false
+        },
+        {
+            "attributes": {
+                "type": "Expense__c",
+                "referenceId": "Expense__cRef3"
+            },
+            "Name": "Taxi",
+            "Amount__c": 25,
+            "Approved__c": false,
+            "Client__c": "Salesforce",
+            "Date__c": "2017-10-04T16:33:00.000+0000",
+            "Reimbursed__c": false
+        },
+        {
+            "attributes": {
+                "type": "Expense__c",
+                "referenceId": "Expense__cRef4"
+            },
+            "Name": "Train",
+            "Amount__c": 225,
+            "Approved__c": false,
+            "Client__c": "Salesforce",
+            "Date__c": "2017-10-05T16:33:00.000+0000",
+            "Reimbursed__c": false
+        },
+        {
+            "attributes": {
+                "type": "Expense__c",
+                "referenceId": "Expense__cRef5"
+            },
+            "Name": "Dinner",
+            "Amount__c": 90,
+            "Approved__c": false,
+            "Client__c": "Acme",
+            "Date__c": "2017-10-03T16:28:00.000+0000",
+            "Reimbursed__c": false
+        },
+        {
+            "attributes": {
+                "type": "Expense__c",
+                "referenceId": "Expense__cRef6"
+            },
+            "Name": "Lunch",
+            "Amount__c": 75,
+            "Approved__c": false,
+            "Client__c": "Acme",
+            "Date__c": "2017-10-04T16:28:00.000+0000",
+            "Reimbursed__c": false
+        },
+        {
+            "attributes": {
+                "type": "Expense__c",
+                "referenceId": "Expense__cRef7"
+            },
+            "Name": "Taxi",
+            "Amount__c": 30,
+            "Approved__c": false,
+            "Client__c": "Salesforce",
+            "Date__c": "2017-10-04T16:33:00.000+0000",
+            "Reimbursed__c": false
+        },
+        {
+            "attributes": {
+                "type": "Expense__c",
+                "referenceId": "Expense__cRef8"
+            },
+            "Name": "Train",
+            "Amount__c": 320,
+            "Approved__c": false,
+            "Client__c": "Salesforce",
+            "Date__c": "2017-10-05T16:33:00.000+0000",
+            "Reimbursed__c": false
+        }
+    ]
+}

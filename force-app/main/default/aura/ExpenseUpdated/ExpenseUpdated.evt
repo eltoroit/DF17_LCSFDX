@@ -1,0 +1,1 @@
+<aura:event type="component" description="Event to save an expense record" />

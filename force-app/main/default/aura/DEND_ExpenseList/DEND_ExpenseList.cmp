@@ -1,0 +1,39 @@
+<aura:component implements="force:appHostable" controller="ExpenseController">
+    <aura:attribute name="expenseSum" type="Double" default="0.00" />
+    <aura:attribute name="expenseCount" type="Integer" default="0" />
+    <aura:attribute name="approvedSum" type="Double" default="0.00" />
+    <aura:attribute name="approvedCount" type="Integer" default="0" />
+    <aura:attribute name="expenses" type="Expense__c[]"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="expenseUpdatedEvent" event="c:DEND_ExpenseUpdated" action="{!c.onExpenseUpdatedEvent}"/>
+    
+    <!-- Expense Counters -->
+    <lightning:card title="Summary" iconName="custom:custom17">
+        <lightning:layout >
+            <lightning:layoutItem size="6" mediumDeviceSize="3" padding="around-small">
+                <p class="summaryHeader">Expenses</p>
+                <p class="summary">{!v.expenseCount} records</p>
+                <p class="summary">
+                    <lightning:formattedNumber value="{!v.expenseSum}" style="currency" 
+                                               currencyCode="USD" currencyDisplayAs="code"/>
+                </p>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6" mediumDeviceSize="3" padding="around-small">
+                <p class="summaryHeader">Approved</p>
+                <p class="summary">{!v.approvedCount} records</p>
+                <p class="summary">
+                    <lightning:formattedNumber value="{!v.approvedSum}" style="currency" 
+                                               currencyCode="USD" currencyDisplayAs="code"/>
+                </p>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+    
+    <!-- Display Expense Data -->
+    <lightning:layout multipleRows="true" >
+        <aura:iteration items="{!v.expenses}" var="expense">
+            <c:DEND_ExpenseCard expense="{!expense}" />
+        </aura:iteration>
+    </lightning:layout>
+</aura:component>
