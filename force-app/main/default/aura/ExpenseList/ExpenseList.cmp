@@ -1,8 +1,11 @@
-<aura:component >
+<aura:component controller="ExpenseController">
     <aura:attribute name="expenseSum" type="Double" default="0.00" />
     <aura:attribute name="expenseCount" type="Integer" default="0" />
     <aura:attribute name="approvedSum" type="Double" default="0.00" />
     <aura:attribute name="approvedCount" type="Integer" default="0" />
+    <aura:attribute name="expenses" type="Expense__c[]"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     
     <!-- Expense Counters -->
     <lightning:card title="Summary" iconName="custom:custom17">
@@ -27,9 +30,11 @@
     </lightning:card>
     
     <!-- Display Expense Data -->
-    <lightning:layout multipleRows="true" horizontalAlign="center">
-        <lightning:layoutItem >
-            <b>Expense Data Will Display Here</b>
-        </lightning:layoutItem>
+    <lightning:layout multipleRows="true">
+        <aura:iteration items="{!v.expenses}" var="expense">
+            <lightning:layoutItem size="12" mediumDeviceSize="6" largeDeviceSize="3" padding="around-small">
+                <lightning:card title="{!expense.Name}" />
+            </lightning:layoutItem>
+        </aura:iteration>
     </lightning:layout>
 </aura:component>
