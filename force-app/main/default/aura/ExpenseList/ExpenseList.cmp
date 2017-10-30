@@ -6,6 +6,7 @@
     <aura:attribute name="expenses" type="Expense__c[]"/>
     
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="expenseUpdatedEvent" event="c:ExpenseUpdated" action="{!c.onExpenseUpdatedEvent}"/>
     
     <!-- Expense Counters -->
     <lightning:card title="Summary" iconName="custom:custom17">

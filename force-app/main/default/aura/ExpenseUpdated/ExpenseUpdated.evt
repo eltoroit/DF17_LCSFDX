@@ -1,1 +1,3 @@
-<aura:event type="component" description="Event to save an expense record" />
+<aura:event type="component" description="Event to request saving an expense record">
+    <aura:attribute name="expense" type="Expense__c" />
+</aura:event>

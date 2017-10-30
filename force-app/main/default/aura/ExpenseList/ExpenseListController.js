@@ -9,5 +9,10 @@
             // debugger;
         });
         $A.enqueueAction(action);
+    },
+    onExpenseUpdatedEvent : function(component, event, helper) {
+        var expense = event.getParam("expense");
+        var strExpense = JSON.stringify(expense);
+        alert("Expense " + strExpense + " was changed");
     }
 })

@@ -1,6 +1,8 @@
 <aura:component >
     <aura:attribute name="expense" type="Expense__c" />
     
+    <aura:registerEvent name="expenseUpdatedEvent" type="c:ExpenseUpdated" />
+    
     <lightning:layoutItem size="12" mediumDeviceSize="6" largeDeviceSize="3" padding="around-small">
         <lightning:card title="{!v.expense.Name}"
                         class="{!'slds-theme_' + (v.expense.Approved__c?'success':'error')}">
@@ -35,7 +37,8 @@
                     <th class="header">Approved?</th>
                     <td class="value">
                         <lightning:input type="toggle" label="Approved" variant="label-hidden"
-                                         checked="{!v.expense.Approved__c}" />
+                                         checked="{!v.expense.Approved__c}"
+                                         onchange="{!c.onApprovedValueChange}" />
                     </td>
                 </tr>
             </table>
