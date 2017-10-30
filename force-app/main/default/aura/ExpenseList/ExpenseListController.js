@@ -12,7 +12,13 @@
     },
     onExpenseUpdatedEvent : function(component, event, helper) {
         var expense = event.getParam("expense");
-        var strExpense = JSON.stringify(expense);
-        alert("Expense " + strExpense + " was changed");
+        var action = component.get("c.saveExpense");
+        action.setParams({
+            "expense": expense
+        });
+        action.setCallback(this, function(actionResult) {
+            helper.recalculateTotals(component);
+        });
+        $A.enqueueAction(action);
     }
 })
