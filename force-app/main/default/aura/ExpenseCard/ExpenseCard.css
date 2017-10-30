@@ -1,0 +1,12 @@
+.THIS .header {
+    padding: 3px;
+}
+
+.THIS .value {
+    padding: 3px;
+    width: 90%;
+}
+
+.THIS .slds-checkbox--off, .THIS .slds-checkbox--on {
+    display: none !important;
+}

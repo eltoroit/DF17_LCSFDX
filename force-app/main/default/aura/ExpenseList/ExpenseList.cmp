@@ -32,9 +32,7 @@
     <!-- Display Expense Data -->
     <lightning:layout multipleRows="true">
         <aura:iteration items="{!v.expenses}" var="expense">
-            <lightning:layoutItem size="12" mediumDeviceSize="6" largeDeviceSize="3" padding="around-small">
-                <lightning:card title="{!expense.Name}" />
-            </lightning:layoutItem>
+            <c:ExpenseCard expense="{!expense}" />
         </aura:iteration>
     </lightning:layout>
 </aura:component>

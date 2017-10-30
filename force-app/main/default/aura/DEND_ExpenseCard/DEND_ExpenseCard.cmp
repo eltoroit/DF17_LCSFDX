@@ -29,7 +29,7 @@
                     <td class="value">
                         <lightning:input type="toggle" label="Reimbursed" variant="label-hidden"
                                          checked="{!v.expense.Reimbursed__c}"
-                                         disabled="{!v.expense.Approved__c}" />
+                                         disabled="{!not(v.expense.Approved__c)}" />
                     </td>
                 </tr>
                 <tr>
